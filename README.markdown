@@ -45,15 +45,20 @@ VML relies on [Irmin](https://github.com/samoht/irmin) to persist and
 distribute its objects. Irmin's representation of objects differs significantly
 from OCaml, and it also requires the object types to provide various
 serialization functions. We built a [PPX](https://ocaml.io/w/PPX) plugin called
-`deriving_versioned` to automate this process. Unfortunately, PPX and Irmin
+`derive-versioned` to automate this process. Unfortunately, PPX and Irmin
 have conflicting dependencies, so we have to package them as separate dockers.
-The `deriving_versioned` docker can be obtained as following:
+The `derive-versioned` docker can be obtained as following:
 
-        docker pull icfp2017/deriving_versioned
+        docker pull icfp2017/derive-versioned
 
 To test its functionality, run bash in the docker:
 
-        docker run -it icfp2017/deriving_versioned bash
+        docker run -it icfp2017/derive-versioned bash
+        
+And then test the PPX rewriter in action with
+        
+        cd canvas
+        make test
 
-
+Examine the generated `derived.ml` for the derived version of the `example.ml` file.
 
