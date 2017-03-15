@@ -1,5 +1,5 @@
 ## VERSIONED ML (VML) ##
-
+The paper (with typos and formatting errors fixed) can be found [here](https://github.com/icfp2017/vml/blob/master/vml.pdf).
 VML programming framework and the associated tools are distributed via Docker.
 To install Docker, please see
 [this](https://docs.docker.com/v1.10/mac/step_one/) for
